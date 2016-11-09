@@ -1,0 +1,6 @@
+---
+cachedir: /opt/puppetlabs/puppet/r10k
+sources:
+  puppet:
+    basedir: /etc/puppetlabs/code/environments
+    remote: https://github.com/zoojar/control-repo-ccc.git
