@@ -13,6 +13,7 @@ sudo rpm -Uvh $puppet_release_package
 export PATH=$puppet_path:$PATH
 sudo yum install -y $puppet_package 
 $puppet_path/gem install r10k
+yum -y install git
 cd /etc/puppetlabs/puppet
 curl https://raw.githubusercontent.com/zoojar/control-repo-ccc/production/r10k.yaml > r10k.yaml
 r10k deploy environment production -v
