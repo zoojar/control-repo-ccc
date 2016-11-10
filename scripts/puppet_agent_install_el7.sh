@@ -24,5 +24,5 @@ if [[ $r10k_yaml_url =~ $regex ]] ; then
   yum -y install git
   cd /etc/puppetlabs/puppet
   curl $r10k_yaml_url > r10k.yaml
-  r10k deploy environment production -v
+  r10k deploy environment -v
 fi
