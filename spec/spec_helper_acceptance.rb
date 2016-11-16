@@ -18,7 +18,7 @@ RSpec.configure do |c|
     puppet_module_install(:source => proj_root, :module_name => 'consul')
     hosts.each do |host|
       # Needed for the consul module to download the binary per the modulefile
-      on host, puppet('module', 'install', 'puppetlabs-stdlib'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module', 'install', 'puppetlabs-stdlibby'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'nanliu/staging'), { :acceptable_exit_codes => [0,1] }
     end
   end
