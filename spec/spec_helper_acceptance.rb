@@ -1,9 +1,9 @@
 require 'beaker-rspec'
+require 'beaker/puppet_install_helper'
 
-# Not needed for this example as our docker files have puppet installed already
-#hosts.each do |host|
-#  # Install Puppet #  install_puppet
-#end
+run_puppet_install_helper
+
+UNSUPPORTED_PLATFORMS = ['windows','Solaris','Darwin']
 
 RSpec.configure do |c|
   # Project root
