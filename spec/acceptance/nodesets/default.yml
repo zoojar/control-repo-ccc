@@ -7,4 +7,4 @@ HOSTS:
     hypervisor: vagrant
     box: puppetlabs/centos-7.2-64-nocm
 CONFIG:
-  type: foss
+  type: pe
