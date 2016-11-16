@@ -8,4 +8,3 @@ HOSTS:
     box: puppetlabs/centos-7.2-64-nocm
 CONFIG:
   type: foss
-Contact GitHub API Training Shop Blog About
