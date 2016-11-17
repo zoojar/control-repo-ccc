@@ -21,7 +21,7 @@ RSpec.configure do |c|
     # Install module and dependencies
     hosts.each do |host|
       on host, puppet('module', 'install', 'zack-r10k', '--version', '3.2.0' ), { :acceptable_exit_codes => [0] }
-      pp = "\"class { \'r10k\': remote => \'#{R10K_REMOTE}\', \'basedir\' => \'/etc/puppetlabs/code/environments\', }\""
+      pp = "\"class { \'r10k\': remote => \'#{R10K_REMOTE}\', basedir => \'/etc/puppetlabs/code/environments\', }\""
       on host, puppet('apply', '-e', pp)
       on host, "r10k deploy --config /etc/r10k.yaml environment #{R10K_BRANCH} -v"
     end
