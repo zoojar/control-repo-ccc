@@ -5,4 +5,5 @@ group :acceptance do
   gem 'rake', '~> 0.9.2'
   gem 'puppetlabs_spec_helper'
   gem 'puppet-lint'
+  gem 'puppet'
 end
