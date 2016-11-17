@@ -4,7 +4,7 @@ require 'beaker/puppet_install_helper'
 run_puppet_install_helper
 
 UNSUPPORTED_PLATFORMS = ['windows','Solaris','Darwin']
-R10K_REMOTE           = "#{ENV[GIT_URL]}" 
+R10K_REMOTE           = "#{ENV['GIT_URL']}" 
 
 RSpec.configure do |c|
   # Project root
