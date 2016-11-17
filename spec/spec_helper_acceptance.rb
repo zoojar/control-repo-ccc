@@ -17,8 +17,8 @@ RSpec.configure do |c|
   c.before :suite do
     # Install module and dependencies
     hosts.each do |host|
-      pp = "\'class { \'r10k\': remote => \'#{R10K_REMOTE}\',}\'"
       on host, puppet('module', 'install', 'zack-r10k', '--version', '3.2.0' ), { :acceptable_exit_codes => [0] }
+      pp = "\"class { \'r10k\': remote => \'#{R10K_REMOTE}\',}\""
       on host, puppet('apply', '-e', pp)
     end
   end
