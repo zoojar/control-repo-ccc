@@ -4,7 +4,7 @@ describe 'file test' do
 
   context 'default parameters' do
     # Using puppet_apply as a helper
-    describe file('/etc/puppetlabs/code/environments/consul_cluster/site/manifests/role/webserver.pp') do
+    describe file('/etc/puppetlabs/code/environments/consul_cluster/site/role/manifests/webserver.pp') do
       it { should be_file }
     end
   end
