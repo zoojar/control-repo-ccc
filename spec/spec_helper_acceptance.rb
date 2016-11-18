@@ -13,7 +13,6 @@ class { 'r10k':
   sources           => {
     'puppet' => {
         'remote'  => '#{R10K_REMOTE}',
-        'basedir' => "\${::settings::confdir}/environments",
         'prefix'  => false,
     }
   },
