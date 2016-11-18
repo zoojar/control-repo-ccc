@@ -13,6 +13,7 @@ class { 'r10k':
   sources           => {
     'puppet' => {
         'remote'  => '#{R10K_REMOTE}',
+        'basedir' => '/etc/puppetlabs/code/environments',
         'prefix'  => false,
     }
   },
