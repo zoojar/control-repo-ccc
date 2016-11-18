@@ -37,6 +37,7 @@ RSpec.configure do |c|
       create_remote_file(host, '/tmp/r10k.pp', r10k_pp)
       on host, puppet('apply', '/tmp/r10k.pp')
       on host, "r10k deploy environment -p -v"
+      on host, puppet('config', 'set', 'environment', 'prod' )
     end
   end
 end
