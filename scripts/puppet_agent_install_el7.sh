@@ -2,9 +2,6 @@
 #Script to install puppet agent on el7
 # Pass optional argument for a url to download r10k.yaml
 
-log_file='/var/log/puppet_agent_install_el7.sh.log'
-exec > >(tee -a $log_file) 2>&1
-
 r10k_yaml_url=$1
 
 puppet_release_package='https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm'
